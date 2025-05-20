@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 4: Norma con Ansiedad</title>
+ <link rel="preload" href="normalize.css" as="style">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style">
+  
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="escena4-container">
+        <!-- Fondo de la escena -->
+        <div id="escena4-background"></div>
+
+        <!-- Avatar de Norma -->
+        <div id="escena4-norma-ansiedad">
+            <img src="images/Norma_Ansiedad.png" alt="Norma con ansiedad">
+        </div>
+
+        <div id="escena4-norma-pensando">
+            <img src="images/Norma_pensando.png" alt="Norma pensando">
+        </div>
+        <div id="escena4-norma-normal">
+            <img src="images/Norma.png" alt="Norma normal">
+        </div>
+
+        <!-- Mensaje inicial -->
+        <div id="escena4-initial-msg" class="escena4-msg-bubble">
+            <p>Norma se siente triste al compararse con otros en redes sociales. Ha recibido comentarios negativos en sus fotos y no puede dejar de revisar el celular, incluso cuando le genera ansiedad.</p>
+            <button id="escena4-see-message">Veamos qué le pasa</button>
+        </div>
+
+        <!-- Mensaje secundario (Contiene el botón problemático) -->
+        <div id="escena4-problem-dialog" class="escena4-problem-bubble">
+            <p>Últimamente, después de ver historias de mis compañeras, siento que mi vida es aburrida... Y ayer alguien comentó algo feo en mi foto. Desde entonces no puedo dejar de pensar en eso. ¿Será normal?</p>
+            <button id="escena4-help-btn">¿Qué debería hacer Norma?</button>
+        </div>
+
+        <!-- Opciones de decisión -->
+        <div id="escena4-options" class="escena4-options-box">
+            <p>¿Qué debería hacer Norma?</p>
+            <button id="escena4-opt1">1. Ignorarlo, todos pasan por eso.</button>
+            <button id="escena4-opt2">2. Dejar de subir fotos para evitar comentarios.</button>
+            <button id="escena4-opt3">3. Contarle a sus padres cómo se siente.</button>
+        </div>
+
+        <!-- Feedback opción incorrecta 1 -->
+        <div id="escena4-feedbackAlert" class="escena4-feedback-alert">
+            <div><img class="image-escena4" src="images/Alerta.png" alt="Alerta"></div>
+            <p>Ignorar tus emociones puede empeorarlas. Si algo te hace daño, es válido pedir ayuda.</p>
+            <button id="escena4-feedback1BtnClose" class="escena4-feedback-close">Volver a intentar</button>
+        </div>
+
+        <!-- Feedback opción incorrecta 2 -->
+        <div id="escena4-feedbackWarning" class="escena4-feedback-warning">
+            <div><img class="image-escena4-warning" src="images/peligro.png" alt="Peligro"></div>
+            <p>No es justo que dejes de hacer lo que te gusta por culpa de otros. Habla con alguien de confianza.</p>
+            <button id="escena4-feedback3BtnClose" class="escena4-feedback-close">Volver a intentar</button>
+        </div>
+
+        <!-- Feedback opción correcta -->
+        <div id="escena4-feedback2" class="escena4-feedback-well">
+            <picture>
+                <source srcset="images/bien.webp" type="image/webp">
+                <img src="images/bien.png" alt="bien" loading="lazy">
+            </picture>
+            <p>¡Buena decisión! Hablar con sus padres le ayudará a manejar mejor estas situaciones y sentirse apoyada.</p>
+            <button id="escena4-talk-parents-btn" class="escena4-feedback-close">Hablar con sus padres</button>
+        </div>
+
+        <!-- Diálogo de Norma con padres -->
+        <div id="escena4-norma-accept" class="escena4-dialog-bubble-help">
+            <p>Mamá, papá... necesito hablar con ustedes. Últimamente me siento muy mal cuando uso redes sociales. Me comparo con otros y ayer alguien puso un comentario feo en mi foto. No puedo dejar de pensar en eso...</p>
+            <button id="escena4-close-dialog">Cerrar</button>
+        </div>
+
+        <!-- Contenedor de padres -->
+        <div id="escena4-parents-container">
+            <div id="escena4-mom" class="parent-avatar4">
+                <img src="images/mamá.png" alt="Mamá">
+            </div>
+            <div id="escena4-dad" class="parent-avatar4">
+                <img src="images/papá.png" alt="Papá">
+            </div>
+            <!-- Aplicando la clase que estaba en el HTML pero no en el CSS -->
+            <div id="escena4-parents-msg" class="escena4-dialog-bubble-parents">
+                <p>Hija, gracias por contarnos. Lo que sientes es importante. A veces las redes muestran solo lo 'bonito', pero no la realidad. Vamos a trabajar en que uses internet de forma más sana, ¿te parece?</p>
+                <button id="escena4-close-parents-msg">Cerrar</button>
+            </div>
+
+            <div id="escena4-parents-msg2" class="escena4-dialog-bubble-parents">
+                <p>Podemos configurar juntos la privacidad de tus cuentas, aprender a manejar los comentarios negativos y establecer horarios más saludables para usar el celular. Lo importante es que sepas que estamos aquí para apoyarte.</p>
+                <button id="escena4-close-parents-msg2">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Feedback final -->
+        <div id="escena4-final-feedback" class="escena4-feedback">
+            <p>Hablar de tus emociones con adultos te ayuda a sentirte mejor y a usar internet de manera segura. ¡No estás sola!</p>
+            <button id="escena4-next-btn">Siguiente escena</button>
+        </div>
+    </div>
+    <script src="escena4.js"></script>
+</body>
+</html>

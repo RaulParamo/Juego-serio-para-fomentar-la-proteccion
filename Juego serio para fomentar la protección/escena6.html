@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 6: El proyecto del equipo</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scene-container">
+        <div class="scene-background"></div>
+
+        <!-- Personajes -->
+        <div class="character character-juan" id="juan-normal"></div>
+        <div class="character character-juan-initial" id="juan-initial"></div>
+        <div class="character character-boy" id="boy"></div>
+        <div class="character character-girl" id="girl"></div>
+        <div class="character character-norma-thinking" id="norma-thinking"></div>
+        <div class="character character-norma-normal" id="norma-normal"></div>
+        <div class="character character-teacher" id="teacher"><img src="images/Profesor.png" alt=""></div>
+
+        <!-- Diálogos -->
+        <div class="dialog dialog-initial" id="initial-dialog">
+            <div class="dialog-content">
+                <p>Norma está haciendo un proyecto escolar en equipo sobre el cuidado del agua. Un compañero propone usar una app que "automatiza todo": genera gráficas, redacciones y hasta corrige errores. La app no es muy conocida, pero tiene buena puntuación en la tienda de apps. Sin embargo, para usarla deben dar acceso a su galería, micrófono y todos sus contactos.</p>
+                <button class="btn btn-green" id="close-initial">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-question" id="question-dialog">
+            <div class="dialog-content">
+                <p>Mis compañeros quieren usar una app porque ahorrará tiempo. ¿Qué debo hacer? No me da confianza esa aplicación. Recuerdo que tuve una conversación con mis tíos Lalo y Mary, ingenieros en computación, y me explicaron algo muy importante...</p>
+                <button class="btn btn-green" id="close-question">...</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-modal" id="memory-modal">
+            <div class="dialog-modal-content">
+                <picture>
+                    <source srcset="images/tios.webp" type="image/webp">
+                    <img src="images/tios.png" alt="Recordando" class="modal-image" loading="lazy">
+                </picture>
+                <button class="btn btn-red" id="close-modal">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-options" id="options-dialog">
+            <div class="dialog-options-content">
+                <h2>¿Qué debería hacer Norma?</h2>
+                <button class="option-btn" data-option="1">1. Descargar la app, usarla y listo. "Si tiene estrellas, debe estar bien."</button>
+                <button class="option-btn" data-option="2">2. Proponer otra app más conocida, aunque implique más esfuerzo.</button>
+                <button class="option-btn" data-option="3">3. Buscar información sobre la app: quién la desarrolló, reseñas en foros, permisos.</button>
+                <button class="option-btn" data-option="4">4. Aceptar usar la app, pero sin dar todos los permisos.</button>
+            </div>
+        </div>
+
+        <!-- Flujo de diálogos -->
+        <div class="dialog dialog-teacher" id="teacher-question">
+            <div class="dialog-content">
+                <p>Veo que el equipo se dividió, ¿me pueden explicar?</p>
+                <button class="btn btn-red" id="continue-flow1">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-flow" id="flow-norma1">
+            <div class="dialog-content">
+                <p>Profesor, yo decidí trabajar por mi cuenta porque noté que el grupo quería tomar decisiones arriesgadas que no respetaban las reglas de protección de datos. Preferí hacer mi parte con responsabilidad.</p>
+                <button class="btn btn-red" id="continue-flow2">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-teacher" id="flow-teacher1">
+            <div class="dialog-content">
+                <p>¿Qué tipo de riesgos evitaste?</p>
+                <button class="btn btn-red" id="continue-flow3">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-flow" id="flow-norma2">
+            <div class="dialog-content">
+                <p>Querían compartir contraseñas y datos personales en una aplicación poco confiable. Yo sabía que eso ponía en peligro nuestra información, así que opté por trabajar sola y protegerla correctamente.</p>
+                <button class="btn btn-red" id="continue-flow4">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-teacher" id="flow-teacher2">
+            <div class="dialog-content">
+                <p>Esa fue una decisión consciente y muy responsable. Valoro que hayas puesto la seguridad por encima de la presión del grupo.</p>
+                <button class="btn btn-red" id="continue-flow5">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-flow" id="flow-final">
+            <div class="dialog-content">
+                <p>No lo había pensado así. Creo que tiene razón. Fue valiente hacer eso, gracias. Creo que todos aprendemos más cuando pensamos en las consecuencias de nuestras acciones, sobre todo cuando se trata de nuestros datos personales.</p>
+                <button class="btn btn-red" id="continue-flow6">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Feedbacks -->
+        <div class="dialog dialog-feedback" id="feedback-1">
+            <div class="dialog-feedback-content">
+                <picture>
+                    <source srcset="images/Alerta.webp" type="image/webp">
+                    <img src="images/Alerta.png" alt="Alerta" class="feedback-image" loading="lazy">
+                </picture>
+                <p>Corres el riesgo de que el teléfono empiece a mostrar publicidad extraña. Algunos archivos podrían borrarse y como consecuencia   el equipo tendría que rehacer el trabajo.</p>
+                <button class="btn btn-red" id="close-feedback1">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-feedback" id="feedback-3">
+            <div class="dialog-feedback-content">
+                <picture>
+                    <source srcset="images/bien.webp" type="image/webp">
+                    <img src="images/bien.png" alt="Bien" class="feedback-image" loading="lazy">
+                </picture>
+                <p>¡Muy bien! solo así el equipo puede darse cuenta si la aplicación tiene quejas por mal uso de los datos personales.</p>
+                <button class="btn btn-green" id="close-feedback3">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-feedback" id="feedback-4">
+            <div class="dialog-feedback-content">
+                <picture>
+                    <source srcset="images/mal.webp" type="image/webp">
+                    <img src="images/mal.png" alt="Mal" class="feedback-image" loading="lazy">
+                </picture>
+                <p>Aunque la instales y limites sus permisos puede que la app limite sus funciones. Provocando que tus compañeros se frustren. Esto sirve como lección sobre los riesgos de compartir datos personales.</p>
+                <button class="btn btn-red" id="close-feedback4">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="dialog dialog-final" id="final-feedback">
+            <div class="dialog-final-content">
+                <picture>
+                    <source srcset="images/bien.webp" type="image/webp">
+                    <img src="images/bien.png" alt="Bien" class="final-image" loading="lazy">
+                </picture>
+                <p>¡Bien hecho!</p>
+                <p>Aplicaste conocimientos previos sobre privacidad y análisis crítico de herramientas digitales. Se fomentó la toma de decisiones informadas en contextos colaborativos. Reforzaste la confianza en aprendizajes previos (padres o tíos) sin necesidad de consulta directa.</p>
+                <button class="btn btn-green" id="close-final">Finalizar</button>
+            </div>
+        </div>
+    </div>
+    <script src="escena6.js"></script>
+</body>
+</html>

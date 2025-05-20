@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 1: Autorevelación</title>
+    <link rel="preload" href="normalize.css" as="style">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Avatar Norma -->
+        <div id="normaAvatar">
+            <picture>
+                <source srcset="images/Norma.webp" type="image/webp">
+                <img id="normaImage" src="images/Norma.png" alt="Norma" loading="lazy">
+            </picture>
+        </div>
+
+        <!-- Avatar Mamá -->
+        <div id="momAvatar" class="character">
+            <picture>
+                <source srcset="images/mamá.webp" type="image/webp">
+                <img class="momAvatar" src="images/mamá.png" alt="Mamá" loading="lazy">
+            </picture>
+        </div>
+
+        <!-- Globo de diálogo de la mamá -->
+        <div id="momBubble" class="bubble mom-bubble">
+            <p>Norma, hiciste muy bien en contarnos sobre este mensaje. En Internet, no siempre sabemos quién está del otro lado, y algunos pueden tener malas intenciones. Lo mejor es no interactuar con desconocidos y bloquearlos. Si algo te hace sentir incómoda, siempre puedes contarnos. Estamos aquí para ayudarte.</p>
+            <button id="closeMomBubble">Cerrar</button>
+        </div>
+
+        <!-- Mensaje final del juego -->
+        <div id="finalMessage" class="final-message">
+            <picture>
+                <source srcset="images/bien.webp" type="image/webp">
+                <img src="images/bien.png" alt="bien" loading="lazy">
+            </picture>
+            <p>Has demostrado confianza al comunicarte con tus padres. No debes de olvidar que ante cualquier duda debes confiar en algún adulto responsable que sea de tu confianza o en algún maestro.</p>
+        </div>
+
+        <div id="phone" class="phone-container">
+            <picture>
+                <source srcset="images/phone.webp" type="image/webp">
+                <img src="images/phone.png" alt="Teléfono" id="phoneImage" loading="lazy">
+            </picture>
+        </div>
+
+        <!-- Globo de texto inicial -->
+        <div id="messageBubble" class="bubble">
+            <p>¡Norma recibió un mensaje!<br>Da clic en el teléfono para verlo.</p>
+        </div>
+
+        <!-- Globo de texto de decisión -->
+        <div id="decisionBubble" class="bubble decision-bubble">
+            <p>Este mensaje me parece sospechoso, yo nunca me he inscrito a un concurso, no sé porqué me quieren dar un premio, ayudame a decidir, ¿Tú qué harías?</p>
+            <button id="helpButton">Ayúdala</button>
+        </div>
+
+        <button id="startButton">Iniciar</button>
+
+        <!-- Elemento de audio para el sonido del mensaje -->
+        <audio id="messageSound" src="sounds/mensaje.mp3"></audio>
+
+        <!-- Ventana del mensaje -->
+        <div id="messageWindow" class="message-window">
+            <picture>
+                <source srcset="images/mensaje2.webp" type="image/webp">
+                <img src="images/mensaje2.png" alt="Mensaje" class="message-image" loading="lazy">
+            </picture>
+            <button id="closeMessageWindow">Cerrar</button>
+        </div>
+
+        <!-- Opciones después de cerrar la ventana del mensaje -->
+        <div id="options" class="options">
+            <p>¿Qué debería hacer Norma en esta situación?</p>
+            <button id="option1">1.Responder al mensaje y visitar el enlace </button>
+            <button id="option2">2. Ignorar el mensaje y no contarle a nadie</button>
+            <button id="option3">3. Contarle a sus padres y bloquear el número desconocido</button>
+        </div>
+
+        <!-- Mensaje de retroalimentación para opción incorrecta -->
+        <div id="feedbackMessage" class="feedback-message">
+            <div class="feedback-content">
+                <picture>
+                    <source srcset="" type="image/webp" id="feedbackImageWebp">
+                    <img id="feedbackImage" src="" alt="Feedback" loading="lazy">
+                </picture>
+                <p id="feedbackText"></p>
+                <button id="closeFeedback">Volver a intentar</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

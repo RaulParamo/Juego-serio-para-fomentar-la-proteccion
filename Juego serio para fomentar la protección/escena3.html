@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 3: Norma Cansada</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="preload" href="normalize.css" as="style">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="escena3-container">
+        <!-- Fondo de la escena -->
+        <div id="escena3-background"></div>
+        
+        <!-- Avatar de Norma -->
+        <div id="escena3-norma">
+            <picture>
+                <source srcset="images/Norma_cansada.webp" type="image/webp">
+                <img src="images/Norma_cansada.png" alt="Norma cansada" loading="lazy">
+            </picture>
+        </div>
+
+        <div id="escena3-norma-sincel">
+            <picture>
+                <source srcset="images/Norma_cansada_sincelular.webp" type="image/webp">
+                <img src="images/Norma_cansada_sincelular.png" alt="Norma sin cel" loading="lazy">
+            </picture>
+        </div>
+        <div id="escena3-norma-normal">
+            <picture>
+                <source srcset="images/Norma.webp" type="image/webp">
+                <img src="images/Norma.png" alt="Norma normal" loading="lazy">
+            </picture>
+        </div>
+
+        <!-- Mensaje inicial -->
+        <div id="escena3-initial-msg" class="escena3-msg-bubble">
+            <p>Norma lleva horas en redes sociales, se siente cansada de su cuerpo, tiene el celular en la mano y sus ojos están enrojecidos y parpadea con frecuencia, intentando enfocar la pantalla. Veamos qué le pasa.</p>
+            <button id="escena3-see-message">¿Qué siente Norma?</button>
+        </div>
+        
+        <!-- Mensaje secundario -->
+        <div id="escena3-problem-dialog" class="escena3-problem-bubble">
+            <p>Ufff... otra vez lo mismo. Llevo horas en Instagram y TikTok, y ahora siento los ojos como si tuvieran arena... 😵‍💫 ¡Hasta me duele la cabeza! Y mi espalda... ni hablar, parece que me clavaron alfileres.</p>
+            <button id="escena3-help-btn">¿Qué debe hacer Norma?</button>
+        </div>
+        
+        <!-- Opciones de decisión -->
+        <div id="escena3-options" class="escena3-options-box">
+            <p>¿Qué debe hacer Norma?</p>
+            <button id="escena3-opt1">1. Ignorar las molestias y seguir usando el celular igual.</button>
+            <button id="escena3-opt2">2. Decirle a sus padres y buscar juntos soluciones.</button>
+            <button id="escena3-opt3">3. Automedicarse con pastillas para el dolor sin consultar a nadie.</button>
+        </div>
+        
+        <!-- Feedback opción incorrecta 1 -->
+        <div id="escena3-feedbackAlert" class="escena3-feedback-alert">
+            <div>
+                <picture>
+                    <source srcset="images/Alerta.webp" type="image/webp">
+                    <img class="image-escena3" src="images/Alerta.png" alt="Alerta" loading="lazy">
+                </picture>
+            </div>
+            <p>Ignorar los síntomas puede empeorar los problemas de salud. El uso excesivo de pantallas puede causar fatiga visual crónica, dolores de cabeza persistentes y problemas posturales.</p>
+            <button id="fedback1BtnClose" class="escena3-feedback-close1">Volver a intentar</button>
+        </div>
+        
+        <!-- Feedback opción incorrecta 2 -->
+        <div id="escena3-feedbackWarning" class="escena3-feedback-warning">
+            <div>
+                <picture>
+                    <source srcset="images/peligro.webp" type="image/webp">
+                    <img class="image-escena3-warning" src="images/peligro.png" alt="Peligro" loading="lazy">
+                </picture>
+            </div>
+            <p> Nunca te automediques. Las pastillas para el dolor solo enmascaran los síntomas sin resolver la causa real y pueden poner en peligro tu vida.</p>
+            <button id="fedback3BtnClose" class="escena3-feedback-close2">Volver a intentar</button>
+        </div>
+        
+        <!-- Feedback opción correcta -->
+        <div id="escena3-feedback2" class="escena3-feedback-well">
+            <picture>
+                <source srcset="images/bien.webp" type="image/webp">
+                <img src="images/bien.png" alt="bien" loading="lazy">
+            </picture>
+            <p>¡Bien hecho! Hablar con sus padres le ayuda a encontrar soluciones seguras. Ellos pueden guiarla para reducir el tiempo de pantalla, mejorar tu postura y evitar problemas de salud a largo plazo.</p>
+            <button id="escena3-talk-parents-btn" class="escena3-feedback-close">Hablar con sus padres</button>
+        </div>
+        
+        <!-- Diálogo de Norma con padres -->
+        <div id="escena3-norma-accept" class="escena3-dialog-bubble-help">
+            <p>Mamá, papá... necesito hablar con ustedes. Últimamente me duele mucho la espalda, tengo los ojos cansados y me siento agotada. Creo que es por pasar tanto tiempo en el celular y la computadora. No sé qué hacer, ¿me pueden ayudar?</p>
+            <button id="escena3-close-dialog" class="escena3-close-dialog-norma">Cerrar</button>
+        </div>
+
+        <!-- Contenedor de padres -->
+        <div id="escena3-parents-container">
+            <div id="escena3-mom" class="parent-avatar3">
+                <picture>
+                    <source srcset="images/mamá.webp" type="image/webp">
+                    <img src="images/mamá.png" alt="Mamá" loading="lazy">
+                </picture>
+            </div>
+            <div id="escena3-dad" class="parent-avatar3">
+                <picture>
+                    <source srcset="images/papá.webp" type="image/webp">
+                    <img src="images/papá.png" alt="Papá" loading="lazy">
+                </picture>
+            </div>
+            <div id="escena3-parents-msg" class="escena3-dialog-bubble-parents">
+                <p>Hija, hiciste muy bien en decírnoslo. Es importante escuchar a tu cuerpo. El uso excesivo de pantallas puede causar fatiga visual, dolores musculares y hasta afectar tu sueño. Vamos a buscar formas de equilibrar tu tiempo.</p>
+                <button id="escena3-close-parents-msg">Cerrar</button>
+            </div>
+
+            <div id="escena3-parents-msg2" class="escena3-dialog-bubble-parents">
+                <p>Podemos hacer pausas activas cada hora, ajustar el brillo de la pantalla y asegurarnos de que tu postura sea correcta. También podemos salir a caminar juntos para que descanses la vista y te muevas más. Si sientes que algo no está bien, siempre puedes contarnos.</p>
+                <button id="escena3-close-parents-msg2">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Feedback final -->
+        <div id="escena3-final-feedback" class="escena3-feedback">
+            <p>¡Excelente decisión! Norma actuó de manera responsable al reconocer el problema y buscar ayuda. La comunicación con los padres es clave para encontrar soluciones saludables y equilibradas para el uso de tecnología.</p>
+            <button id="escena3-next-btn">Siguiente escena</button>
+        </div>
+    </div>
+    <script src="escena3.js"></script>
+</body>
+</html>

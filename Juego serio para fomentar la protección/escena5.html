@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 5 - Un descanso necesario</title>
+    <link rel="preload" href="normalize.css" as="style">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="escena5-container">
+        <!-- Fondo de la escena -->
+        <div id="escena5-background"></div>
+        
+        <!-- Avatar de Norma -->
+        <div id="escena5-norma">
+            <picture>
+                <source srcset="images/Norma_sentada.webp" type="image/webp">
+                <img src="images/Norma_sentada.png" alt="Norma cansada" loading="lazy">
+            </picture>
+        </div>
+
+        <!-- Diálogo inicial -->
+        <div id="escena5-dialogo-inicial" class="escena5-dialogo1">
+            <div class="escena5-contenido-dialogo">
+                <p>Después de comentar el dolor de ojos y espalda con sus padres, ellos le recomendaron a Norma usar una app que le recuerde pausas activas cada hora.</p>
+                <button id="escena5-cerrar-inicial">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Diálogo con Norma -->
+        <div id="escena5-dialogo-norma" class="escena5-dialogo2">
+            <div class="escena5-contenido-dialogo">
+                <p>Me llegó un mensaje de la aplicación "DescansaApp"</p>
+                <button id="escena5-ver-mensaje">Ver mensaje</button>
+            </div>
+        </div>
+
+        <!-- Modal WhatsApp -->
+        <div id="escena5-modal-whatsapp" class="escena5-modal">
+            <div class="escena5-contenido-modal">
+                <picture>
+                    <source srcset="images/descansaapp.webp" type="image/webp">
+                    <img src="images/descansaapp.png" alt="WhatsApp" class="escena5-imagen" loading="lazy">
+                </picture>
+                <button id="escena5-cerrar-whatsapp">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Cuadro de opciones -->
+        <div id="escena5-opciones" class="escena5-dialogo3">
+            <div class="escena5-contenido-dialogo">
+                <h2 class="escena5-titulo">¿Qué debe hacer Norma?</h2>
+                <button class="escena5-opcion" data-opcion="1">1. Pausas el juego, te estiras y haces ejercicios de relajación ocular durante 5 min.</button>
+                <button class="escena5-opcion" data-opcion="2">2. Cierras el recordatorio y sigues jugando, aunque te moleste la pantalla.</button>
+                <button class="escena5-opcion" data-opcion="3">3. Activas el "modo nocturno" en la pantalla pero no te levantas de tu asiento.</button>
+            </div>
+        </div>
+
+        <!-- Feedback opción 1 -->
+        <div id="escena5-feedback-1" class="escena5-dialogo4">
+            <div class="escena5-contenido-dialogo-bien">
+                <picture>
+                    <source srcset="images/bien.webp" type="image/webp">
+                    <img src="images/bien.png" alt="" loading="lazy">
+                </picture>
+                <p>¡Excelente! Tomar descansos activos cuida tu salud física y reduce la fatiga.</p>
+                <button id="escena5-cerrar-feedback-1">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Feedback opción 2 -->
+        <div id="escena5-feedback-2" class="escena5-dialogo5">
+            <div class="escena5-contenido-dialogo">
+                <picture>
+                    <source srcset="images/peligro.webp" type="image/webp">
+                    <img src="images/peligro.png" alt="Peligro" class="escena5-imagen" loading="lazy">
+                </picture>
+                <p>Ignorar los descansos puede agravar dolores y fatiga ocular.</p>
+                <button id="escena5-intentar-2" class="escena5-btn-rojo">Intentar de nuevo</button>
+            </div>
+        </div>
+
+        <!-- Feedback opción 3 -->
+        <div id="escena5-feedback-3" class="escena5-dialogo6">
+            <div class="escena5-contenido-dialogo">
+                <picture>
+                    <source srcset="images/Alerta.webp" type="image/webp">
+                    <img src="images/Alerta.png" alt="Alerta" class="escena5-imagen" loading="lazy">
+                </picture>
+                <p>El "modo nocturno" ayuda un poco, pero estirarte es esencial para tu bienestar.</p>
+                <button id="escena5-intentar-3" class="escena5-btn-rojo">Intentar de nuevo</button>
+            </div>
+        </div>
+
+        <!-- Mensaje final -->
+        <div id="escena5-mensaje-final" class="escena5-dialogo7">
+            <div class="escena5-contenido-dialogo-bien">
+                ¡Muy bien! 
+                <p> -Reconoces los efectos físicos del uso prolongado de medios digitales.</p>
+                <p>- Has aprendido a hacer pausas activas y conductas saludables durante el uso de tecnologías.</p>
+                <p>- Has reforzado tu autonomía en la toma de decisiones sobre tu bienestar.</p>
+                <button id="escena5-cerrar-final">Siguiente escena</button>
+            </div>
+        </div>
+
+        <script src="escena5.js"></script>
+    </div>
+</body>
+</html>

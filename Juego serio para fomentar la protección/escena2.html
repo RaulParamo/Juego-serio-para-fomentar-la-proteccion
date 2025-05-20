@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 2: Amigo en línea</title>
+    <link rel="preload" href="normalize.css" as="style">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style">
+  
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="escena2-container">
+        <!-- Fondo de la escena -->
+        <div id="escena2-background"></div>
+
+        <!-- Avatar de Norma -->
+        <div id="escena2-norma">
+            <img src="images/Norma_whatsapp.png" alt="Norma">
+        </div>
+
+
+        <!-- Mensaje inicial -->
+        <div id="escena2-initial-msg" class="escena2-msg-bubble">
+            <p>Norma está usando WhatsApp tranquilamente, revisando mensajes de sus amigos, cuando de repente recibe una
+                notificación. Es un mensaje de un compañero de su escuela con quien apenas ha cruzado palabra. Veamos
+                que es lo que sucede.</p>
+            <button id="escena2-see-message">Ver el mensaje</button>
+        </div>
+
+        <div id="escena2-norma-pensando-whatsapp">
+
+            <img src="images/Norma_pensando_whastsapp.png" alt="Norma pensando">
+        </div>
+
+
+        <!-- Modal de la computadora -->
+        <div id="escena2-computer-modal" class="escena2-modal">
+            <div class="escena2-modal-content">
+                <img src="images/Whatsapp.png" alt="Mensaje en computadora">
+                <button id="escena2-close-modal">Cerrar</button>
+            </div>
+        </div>
+
+
+
+        <!-- Diálogo de ayuda -->
+        <div id="escena2-help-dialog" class="escena2-dialog-bubble">
+            <p>El archivo tiene una extensión extraña y no sé bien qué contiene. Recuerdo que mis papás ya me hablaron
+                de esto...</p>
+            <button id="escena2-help-btn">...</button>
+        </div>
+        <!-- Modal de recuerdo -->
+        <div id="escena2-recordando-modal" class="escena2-modal2">
+            <div class="escena2-modal-content2">
+                <img src="images/recordando.png" alt="recordando">
+                <button id="escena2-close-modal2">Cerrar</button>
+            </div>
+        </div>
+        <!-- Opciones de decisión -->
+        <div id="escena2-options" class="escena2-options-box">
+            <p>¿Qué debería hacer Norma?</p>
+            <button id="escena2-opt1">1. Descargar el archivo “solo para ver qué pasa”.</button>
+            <button id="escena2-opt2">2. Recordar lo que le dijeron sus padres y buscar en internet el tipo de archivo antes de decidir.</button>
+            <button id="escena2-opt3">3. Ignorar el archivo y borrar la conversación.</button>
+            <button id="escena2-opt4">4. Responderle al compañero preguntando de qué se trata, sin abrirlo
+                todavía.</button>
+        </div>
+
+        <!-- Mensajes de retroalimentación -->
+        <div id="escena2-feedback1" class="escena2-feedback">
+            <div><img class="image-escena2" src="images/peligro.png" alt="peligro"></div>
+            <p>Recuerda que descargar archivos desconocidos puede dañar el dispositivo o comprometer tu privacidad.</p>
+            <button id="escena2-feedback1-close">Volver a intentar</button>
+        </div>
+        <div id="escena2-feedback3" class="escena2-feedback">
+            <div><img class="image-escena2" src="images/Alerta.png" alt="Alerta"></div>
+            <p>Aunque es más seguro y evita el riesgo, esto no promueve un análisis crítico.</p>
+            <button id="escena2-feedback3-close">Volver a intentar</button>
+        </div>
+
+        <!-- Globo de Norma aceptando consejo -->
+        <div id="escena2-norma-accept" class="escena2-dialog-bubble" style="display: none;">
+            <p>Recuerdo  que  mis papás me dijeron que es mejor no descargarlo. Voy a buscar en internet qué es este tipo
+                de archivo y le preguntaré a mi compañero qué fue lo que me envió.</p>
+            <button id="escena2-talk-parents-btn">cerrar</button>
+        </div>
+
+        <!-- Padres apareciendo 
+        <div id="escena2-parents-container" style="display: none;">
+            <div id="escena2-mom" class="parent-avatar">
+                <img src="images/mamá.png" alt="Mamá">
+            </div>
+            <div id="escena2-dad" class="parent-avatar">
+                <img src="images/papá.png" alt="Papá">
+            </div>
+            <div id="escena2-parents-msg" class="escena2-dialog-bubble-parents">
+                <p>
+                </p>
+                <button id="escena2-close-parents-msg">X</button>
+            </div>
+        </div>
+ -->
+        <div id="escena2-feedback-final" class="escena2-feedback">
+            <p>¡Excelente decisión! Recordaste lo que te enseñaron tus papás, se fomentó en ti el pensamiento crítico y
+                tomaste acciones seguras.</p>
+            <button id="escena2-next-btn">Siguiente escena</button>
+        </div>
+
+
+    </div>
+    <script src="escena2.js"></script>
+</body>
+
+</html>
